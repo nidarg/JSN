@@ -12,6 +12,7 @@ namespace JsonInterfaceTest
         [InlineData("bcd", "cd")]
         [InlineData("A9c", "9c")]
         [InlineData("fa", "a")]
+        [InlineData("4522", "522")]
         public void TestChoiseSuccess(string text,string remaining)
         {
             var hex = new Choices(

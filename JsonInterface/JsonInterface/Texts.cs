@@ -4,11 +4,11 @@ using System.Text;
 
 namespace JsonInterface
 {
-    public class Text:IPattern
+    public class Texts : IPattern
     {
         readonly string prefix;
 
-        public Text(string prefix)
+        public Texts(string prefix)
         {
             this.prefix = prefix;
         }
@@ -21,7 +21,10 @@ namespace JsonInterface
             }
 
             if (string.IsNullOrEmpty(text) || !text.Contains(prefix))
+            {
                 return new FailedMatch(text);
+            }
+
             return new SuccessMatch(text.Substring(prefix.Length));
         }
     }
